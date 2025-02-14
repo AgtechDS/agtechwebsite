@@ -65,7 +65,7 @@ const Software = () => {
           </CardHeader>
           <CardContent>
             <p className="text-gray-600">
-              AGtechAI è un software avanzato per l'automazione e l'intelligenza artificiale, progettato per semplificare processi complessi.
+              AGtechAI è un software avanzato per l'automazione con intelligenza artificiale, progettato per semplificare processi complessi.
             </p>
             <Button
               variant="link"
