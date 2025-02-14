@@ -72,6 +72,7 @@ export default {
       boxShadow: {
         default: "0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)",
         strong: "0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1)",
+        hover: "0 10px 30px rgba(0, 0, 0, 0.2)", // Hover effect shadow
       },
       borderRadius: {
         lg: "12px",
@@ -80,8 +81,8 @@ export default {
       },
       keyframes: {
         fadeIn: {
-          "0%": { opacity: 0, transform: "translateY(10px)" },
-          "100%": { opacity: 1, transform: "translateY(0)" },
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
         slideIn: {
           "0%": { transform: "translateX(-100%)" },
@@ -92,9 +93,9 @@ export default {
           "100%": { transform: "scale(1.05)" },
         },
         textFocusIn: {
-          "0%": { opacity: 0, transform: "translateY(10px)" },
-          "100%": { opacity: 1, transform: "translateY(0)" },
-        },
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        }
       },
       animation: {
         fadeIn: "fadeIn 0.5s ease-out forwards",
