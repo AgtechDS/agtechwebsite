@@ -58,13 +58,13 @@ const Software = () => {
           </CardContent>
         </Card>
 
-        {/* Card per AGtechAI */}
-        <Card>
+        {/* Card per AGtechAI con background azzurro */}
+        <Card className="bg-blue-100 border-2 border-blue-400">
           <CardHeader>
             <CardTitle>AGtechAI</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-gray-600">
+            <p className="text-gray-800">
               AGtechAI è un software avanzato per l'automazione con intelligenza artificiale, progettato per semplificare processi complessi.
             </p>
             <Button
