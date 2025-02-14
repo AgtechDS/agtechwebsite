@@ -1,7 +1,7 @@
-
 import { Code } from "lucide-react";
 import Layout from "../components/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button"; // Assicurati di avere il componente Button
 
 const Software = () => {
   return (
@@ -55,6 +55,32 @@ const Software = () => {
               <li>Machine Learning e AI</li>
               <li>Ottimizzazione performance</li>
             </ul>
+          </CardContent>
+        </Card>
+
+        {/* Card per AGtechAI */}
+        <Card>
+          <CardHeader>
+            <CardTitle>AGtechAI</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              AGtechAI è un software avanzato per l'automazione e l'intelligenza artificiale, progettato per semplificare processi complessi.
+            </p>
+            <Button
+              variant="link"
+              className="text-blue-600 hover:text-blue-700 p-0 h-auto font-normal"
+              asChild
+            >
+              <a
+                href="/prodotti/AGtechAI.exe" // Il percorso del file eseguibile
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Scarica AGtechAI
+              </a>
+            </Button>
           </CardContent>
         </Card>
       </div>
