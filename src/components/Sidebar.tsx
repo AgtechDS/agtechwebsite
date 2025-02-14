@@ -1,4 +1,3 @@
-
 import { Server, FileSpreadsheet, Code, Info, Mail, DollarSign, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -56,15 +55,19 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
   return (
     <aside
       className={`${
-        isOpen ? "w-64" : "w-0 md:w-20"
+        isOpen ? "w-90" : "w-90"
       } bg-white border-r border-gray-200 transition-all duration-300 ease-in-out overflow-hidden h-screen fixed md:sticky top-0 z-40`}
     >
       <div className="flex flex-col h-full">
-        <div className="p-6">
-          <h1 className={`text-xl font-semibold ${!isOpen && "md:hidden"}`}>
-            AgTechDesigne
-          </h1>
+        {/* Logo and title */}
+        <div className="p-6 flex items-center gap-5">
+          <img src="\agicon.jpg" alt="AGtech" className="h-20 w-20" />
+          {isOpen && (
+            <h1 className="text-xl font-semibold text-gray-900">AGtechdesigne</h1>
+          )}
         </div>
+        
+        {/* Navigation */}
         <nav className="flex-1 overflow-y-auto">
           <ul className="space-y-1 px-3">
             {menuItems.map((item) => (
@@ -73,14 +76,16 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
                   to={item.path}
                   className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors group"
                 >
-                  <span className="text-gray-500 group-hover:text-brand-600 transition-colors">
+                  <span className="text-gray-500 group-hover:text-brand-600 transition-colors border rounded-full p-2">
                     {item.icon}
                   </span>
-                  <div className={`${!isOpen && "md:hidden"}`}>
+                  <div className="flex flex-col">
                     <span className="text-sm font-medium text-gray-900">
                       {item.title}
                     </span>
-                    <p className="text-xs text-gray-500">{item.description}</p>
+                    {isOpen && (
+                      <p className="text-xs text-gray-500">{item.description}</p>
+                    )}
                   </div>
                 </Link>
               </li>
