@@ -19,25 +19,24 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
 
   return (
     <aside
-      className={`${
-        isOpen ? "w-90" : "w-90"
-      } bg-white border-r border-gray-200 transition-all duration-300 ease-in-out overflow-hidden h-screen fixed md:sticky top-0 z-40`}
+      className={`bg-white border-r border-gray-200 transition-all duration-300 ease-in-out overflow-hidden h-screen fixed md:sticky top-0 z-40 
+        ${isOpen ? "w-64 left-0" : "-left-64"} md:w-90 md:left-0`}
     >
       <div className="flex flex-col h-full">
-        {/* Logo and title */}
+        {/* Logo e Titolo */}
         <div className="p-6 flex items-center gap-5">
           <img src="\agicon.jpg" alt="AGtech" className="h-20 w-20" />
           {isOpen && <h1 className="text-xl font-semibold text-gray-900">AGtechdesigne</h1>}
         </div>
 
-        {/* Navigation */}
+        {/* Navigazione */}
         <nav className="flex-1 overflow-y-auto">
           <ul className="space-y-1 px-3">
             {menuItems.map((item) => (
               <li key={item.title}>
                 <Link
                   to={item.path}
-                  onClick={() => setIsOpen(false)} // <-- Chiude la sidebar su click
+                  onClick={() => setIsOpen(false)} // Chiude la sidebar dopo il click
                   className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors group"
                 >
                   <span className="text-gray-500 group-hover:text-brand-600 transition-colors border rounded-full p-2">
