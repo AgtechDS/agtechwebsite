@@ -26,7 +26,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
         {/* Logo e Titolo */}
         <div className="p-6 flex items-center gap-5">
           <img src="\agicon.jpg" alt="AGtech" className="h-20 w-20" />
-          {isOpen && <h1 className="text-xl font-semibold text-gray-900">AGtechdesigne</h1>}
+          {isOpen && <h1 className="text-xl font-semibold text-gray-900">Menu</h1>}
         </div>
 
         {/* Navigazione */}
